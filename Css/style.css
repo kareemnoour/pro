@@ -1,0 +1,485 @@
+*{
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color:#3a6cf4;
+    --secondary-color:rgba(0, 255, 255, 0.37);
+}
+body{
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+header{
+    width: 100%;
+    padding: 10px 200px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+}
+
+header h1 {
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    padding: 10px 10px;
+    margin: 20px; 
+    transition: 0.5s ease;
+}
+
+header ul li:hover{
+    transform: translateY(-10%); 
+}
+
+header ul li a{
+    color: #ffffff8c;
+}
+
+header ul li:hover a{
+    color:var(--secondary-color);
+}
+
+section{
+    padding: 100px 200px;
+}
+.main{
+    position: relative;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 80%);
+}
+
+.main .box {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+.main .box h2 {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.main  .box .sp{
+    color:white;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.main .box h2 span{
+    display: inline-block;
+    color:var(--secondary-color);
+    padding: 20px;
+    font-size: 40px;
+}
+
+.main .box h3{
+    font-size: medium;
+    opacity: 0.5;
+    padding: 10px 50px;
+}
+
+.btn{
+    margin: 60px 200px ;
+}
+
+.btn {
+    color: #fff;
+    background-color: rgb(0 0 150 / 1);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 15px 35px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.btn:hover a {
+    opacity: 0.7;
+}
+
+.social-icons{
+    font-size: 25px;
+    display: block;
+   
+}
+
+.social-icons i{
+    padding-left: 15px;
+    transition: 0.5s ease;
+}
+
+.social-icons .lin:hover{
+    color:#3f729b ;
+}
+
+.social-icons .twi:hover{
+    color: aqua;
+}
+
+.social-icons .ins:hover{
+    color: #9b583f;
+}
+
+.social-icons .you:hover{
+    color: red;
+    
+}
+
+.social-icons i:hover{
+   transform: scale(1.5); 
+}
+
+/*Start Services*/
+.ser{
+    min-height:100vh;
+}
+
+.ser h2 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+    color: var(--secondary-color);
+
+}
+
+.ser .cont{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.cont .card{
+    width: 200px; min-height: 300px;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 100%);
+    transition: 0.5s ease;
+}
+
+.cont .card:hover{
+    transform: scale(1.1);
+}
+
+.cont .card h3 {
+    padding-bottom: 25px;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+}
+
+.cont .card p {
+    color: #9E9E9E;
+    text-align: center;
+    line-height: 1.3;
+    padding-bottom: 10px;
+}
+
+.cont .card .icon {
+    color: var(--main-color);
+    font-size: 6em;
+    padding-bottom: 25px;
+    margin-top: 20px
+}
+
+
+/*End Services*/
+
+/*Start project*/
+.pro{
+    min-height:100vh;
+    background-color: #9e9e9e08;
+}
+
+.pro h2 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+    color: var(--secondary-color);
+
+}
+.container{
+    position: relative;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+.container .box{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.3s;
+    animation-name: jump;
+    animation-delay: 1s;
+    animation-duration: 0.3;
+}
+
+@keyframes jump {
+    0%{
+        display: none;
+    }
+    50%{
+        display: none;
+    }
+    75%{
+        display: none;
+    }
+    100%{
+        display: block;
+    }
+}
+
+.container .box:hover{
+    transform: translateY(-5%);
+}
+
+.container .box img{
+    width: 100%;
+    min-width: 100%;
+}
+
+.container .box .content{
+    padding: 20px;
+}
+
+.container .box .content h3{
+    padding: 10px 10px 20px ;
+}
+
+.container .box .content p{
+    text-align: center;
+    padding-bottom: 25px;
+    opacity: 0.5;
+    
+}
+
+.container .box .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid white;
+    padding: 20px 15px 30px;
+}
+
+.container .box .info a{
+    color: var(--main-color) ;
+    font-weight: 700;
+}
+
+.container .box .info i{
+    color:var(--main-color);
+}
+
+.container .box:hover .info i{
+    animation: moving-arrow 0.6s linear infinite;
+}
+
+
+/*End project*/
+/*Start contact*/
+.contact{
+    min-height: 100vh;
+}
+
+.contact h2{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+.contact .con{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contact .con .card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 35%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px;
+    transition: 0.7s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;   
+}
+
+.contact .con .card:hover{
+    transform: scale(1.1);
+}
+
+.contact .con .card .icon{
+    text-align: center;
+}
+.contact .con .card i{
+    color: var(--main-color);
+    font-size: 6em;
+    padding-bottom: 25px;
+    margin-top: 20px;
+    
+}
+
+.contact .con .card .info{
+    text-align: center;
+    padding: 10px;
+}
+
+.contact .con .card .info h3 {
+    color:var(--main-color);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.contact .con .card .info p {
+    font-size: 20px;
+}
+/*End contact*/
+
+/*Start Footer*/
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #9e9e9e08;
+    width: 100%;
+    min-height: 50px;
+}
+
+footer p {
+    color:var(--main-color);
+    padding-top: 10px;
+}
+
+footer p i{
+    color: red;
+}
+/*End Footer*/
+
+/* start media*/
+@media(max-width:500px){
+    header{
+        padding: 0;
+        margin: 0;
+        position: absolute;
+    }
+    .main{
+        position: relative;
+    
+    }
+}
+@media (max-width:767px){
+    section{
+        padding:0 ;
+    }
+    header{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header ul li {
+        padding: 1px 1px;
+        margin: 7px; 
+        transition: 0.5s ease;
+    }
+    .main{
+       display: flex;
+       align-items: center;
+    }
+    .btn {
+        color: #fff;
+        background-color: rgb(0 0 150 / 1);
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 600;
+        display: inline-block;
+        padding: 15px 35px;
+        letter-spacing: 1px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        transition: 0.7s ease;
+    }
+    .ser{
+        margin-top: 40px;
+    }
+    .ser .cont{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .ser .cont .card {
+        margin-top: 30px;
+    }
+}
+@media(max-width:991px) {
+}
+
+/* end media*/
+
+/*start animation*/
+@keyframes moving-arrow {
+    100% {
+      transform: translateX(10px);
+    }
+}
+/*End animation*/
